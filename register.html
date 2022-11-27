@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>web期末大作业</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+</head>
+<body>
+<div id="displayTime"></div>
+<div class="container">
+    <div class="header" id="header">
+        <a href="index.html">
+            <img alt="web期末大作业" src="images/header.jpg">
+        </a>
+    </div>
+    <div class="nav">
+        <a href="index.html">首页</a>
+        <a href="food.html">开封美食</a>
+        <a href="register.html">来注册成为我的粉丝吧</a>
+    </div>
+    <div style="background:#E884AA;background-size: 100%;" align="center">
+        <h1>
+            注册页面
+        </h1>
+    </div>
+    <div style="margin-top: 20px;">
+        <hr size="5" noshade="noshade" color="black" width="80%" align="center">
+    </div>
+    <div style="margin-left: 15%;">
+        <font size="3" color="black" face="宋体">
+            <form action="" method="post" name="用户注册">
+                <table cellspacing="10" cellpadding="10">
+                    <tr align="left">
+                        <th>😀用户名:</th>
+                        <td>
+                            <label for="username"></label><input type="text" name="username" id="username"
+                                                                 placeholder="请输入用户名"
+                                                                 onblur="nameCheck()"/>
+                            <span id="username_check">
+									请输入2-6位的字符
+								</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>✅邮箱地址：</th>
+                        <td>
+                            <label for="message"></label><input type="text" name="message" id="message"
+                                                                placeholder="请输入邮箱"
+                                                                onblur="messageCheck()"/>
+                            <span id="message_check">&nbsp;</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>☀设置密码：</th>
+                        <td>
+                            <label for="password"></label><input type="password" name="password" id="password" placeholder="请输入您的密码"
+                                                                 onblur="passwordCheck()"/>
+                            <span id="password_check">
+									6-20个字符，由字母、数字组成
+								</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>⭐确认密码：</th>
+                        <td>
+                            <label for="password-repeat"></label><input type="password" name="re-password" id="password-repeat"
+                                                                        placeholder="请确认您的密码"
+                                                                        onblur="passwordRepeatCheck()"/>
+                            <span id="password-repeat-check">
+									6-20个字符，由字母、数字组成
+								</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>🎈真实姓名</th>
+                        <td>
+                            <label for="real-name"></label><input type="text" name="name" id="real-name" placeholder="您的真实姓名"
+                                                                  onblur="realNameCheck()"/>
+                            <span id="real-name-check">
+									请输入2-6位的字符
+								</span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>💑性别：</th>
+                        <td>
+                            <label>
+                                <input style="height: 20px;width: 20px;" type="radio" name="sex" value="man"
+                                       checked="checked"/>
+                            </label>男
+                            <label>
+                                <input style="height: 20px;width: 20px;" type="radio" name="sex" value="woman"/>
+                            </label>女
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>😀上传头像：</th>
+                        <td>
+                            <input type="file" accept="image/*" name="picture"/>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>📱手机号码：</th>
+                        <td>
+                            <label for="tel"></label><input type="text" name="tel" id="tel" placeholder="您的手机号码"
+                                                            onblur="telCheck()"/>
+                            <span id="tel_check">
+                                    &nbsp;
+                                </span>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>🏫学校/单位名称：</th>
+                        <td>
+                            <label>
+                                <input type="text" name="company" placeholder="学校/单位"/>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th>🌏学校/单位地址： 省份：</th>
+                        <td>
+                            <label>
+                                <select name="province" size="5">
+                                    <option value="北京市">北京市</option>
+                                    <option value="天津市">天津市</option>
+                                    <option value="上海市">上海市</option>
+                                    <option value="重庆市">重庆市</option>
+                                    <option value="内蒙古自治区">内蒙古自治区</option>
+                                    <option value="广西壮族自治区">广西壮族自治区</option>
+                                    <option value="西藏自治区">西藏自治区</option>
+                                    <option value="宁夏回族自治区">宁夏回族自治区</option>
+                                    <option value="新疆维吾尔族自治区">新疆维吾尔族自治区</option>
+                                    <option value="香港特别行政区">香港特别行政区</option>
+                                    <option value="澳门特别行政区">澳门特别行政区</option>
+                                    <option value="河北省">河北省</option>
+                                    <option value="山西省">山西省</option>
+                                    <option value="辽宁省">辽宁省</option>
+                                    <option value="吉林省">吉林省</option>
+                                    <option value="黑龙江省">黑龙江省</option>
+                                    <option value="江苏省">江苏省</option>
+                                    <option value="浙江省" selected="selected">浙江省</option>
+                                    <option value="安徽省">安徽省</option>
+                                    <option value="福建省">福建省</option>
+                                    <option value="江西省">江西省</option>
+                                    <option value="山东省">山东省</option>
+                                    <option value="河南省">河南省</option>
+                                    <option value="广东省">广东省</option>
+                                    <option value="海南省">海南省</option>
+                                    <option value="四川省">四川省</option>
+                                    <option value="贵州省">贵州省</option>
+                                    <option value="云南省">云南省</option>
+                                    <option value="陕西省">陕西省</option>
+                                    <option value="甘肃省">甘肃省</option>
+                                    <option value="青海省">青海省</option>
+                                    <option value="台湾省">台湾省</option>
+                                </select>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr align="left">
+                        <th></th>
+                        <th>
+                            <input type="submit" value="提交" onclick="alert('欢迎您！迪迦')">
+                        </th>
+                    </tr>
+                </table>
+            </form>
+        </font>
+    </div>
+    <!--    <div class="footer">-->
+    <!--        <div class="footer2">-->
+    <!--            <a href="index.html">首页</a>-->
+    <!--            <a href="food.html">开封美食</a>-->
+    <!--            <a href="register.html">注册注册</a>-->
+    <!--            <a href="#header">回到顶部</a>-->
+    <!--        </div>-->
+    <!--&lt;!&ndash;        <div class="footer_logo">&ndash;&gt;-->
+    <!--&lt;!&ndash;            <img src="images/header.jpg">&ndash;&gt;-->
+    <!--&lt;!&ndash;        </div>&ndash;&gt;-->
+    <!--&lt;!&ndash;        <div class="footer1">&ndash;&gt;-->
+    <!--&lt;!&ndash;            <span>web期末大作业  姓名：  班级： 学号：</span>&ndash;&gt;-->
+    <!--&lt;!&ndash;        </div>&ndash;&gt;-->
+    <!--    </div>-->
+</div>
+<script type="text/javascript">
+    function nameCheck() {
+        let name = document.getElementById("username").value;
+        if (name.length < 2 || name.length > 6) {
+            document.getElementById("username_check").innerHTML = "*请输入2-6位的字符";
+            document.getElementById("username_check").style.color = "red";
+        } else {
+            document.getElementById("username_check").innerHTML = "√";
+            document.getElementById("username_check").style.color = "green";
+        }
+    }
+
+    function messageCheck() {
+        let reg = /\d@(qq|163|gmail)[.com]/;
+        let mail = document.getElementById("message").value;
+        if (reg.test(mail)) {
+            document.getElementById("message_check").innerHTML = "√";
+            document.getElementById("message_check").style.color = "green";
+        } else {
+            document.getElementById("message_check").innerHTML = "*您的邮箱输入格式有误";
+            document.getElementById("message_check").style.color = "red";
+        }
+    }
+
+    function passwordCheck() {
+        let reg = /\d+\w+/;
+        let password = document.getElementById("password").value;
+        if (reg.test(password) && password.length >= 6 && password.length <= 20) {
+            document.getElementById("password_check").innerHTML = "√";
+            document.getElementById("password_check").style.color = "green";
+        } else {
+            document.getElementById("password_check").innerHTML = "*密码由6-20字母或数字组成";
+            document.getElementById("password_check").style.color = "red";
+        }
+    }
+
+    function passwordRepeatCheck() {
+        let password = document.getElementById("password").value;
+        let passwordRepeat = document.getElementById("passwordRepeat").value;
+        if (password === passwordRepeat) {
+            document.getElementById("passwordrepeat_check").innerHTML = "√";
+            document.getElementById("passwordrepeat_check").style.color = "green";
+        } else {
+            document.getElementById("passwordrepeat_check").innerHTML = "*两次输入的密码不一致";
+            document.getElementById("passwordrepeat_check").style.color = "red";
+        }
+    }
+
+    function realNameCheck() {
+        var name = document.getElementById("realname").value;
+        if (name.length < 2 || name.length > 6) {
+            document.getElementById("realname_check").innerHTML = "*请输入2-6位的字符";
+            document.getElementById("realname_check").style.color = "red";
+        } else {
+            document.getElementById("realname_check").innerHTML = "√";
+            document.getElementById("realname_check").style.color = "green";
+        }
+    }
+
+    function telCheck() {
+        let reg1 = /1[3|4|5|8|9][0-9]{9}/;
+        let reg2 = /^((\d{3}-\d{8})|(\d{4}-\d(7)))$/;
+        let tel = document.getElementById("tel").value;
+        if (reg1.test(tel) || reg2.test(tel)) {
+            document.getElementById("tel_check").innerHTML = "√";
+            document.getElementById("tel_check").style.color = "green";
+        } else {
+            document.getElementById("tel_check").innerHTML = "*该电话号码不存在";
+            document.getElementById("tel_check").style.color = "red";
+        }
+    }
+</script>
+</body>
+</html>
